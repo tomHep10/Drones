@@ -1,97 +1,204 @@
 <style>
-    nav{
-        margin-bottom: 20px;
-    }
+  nav {
+    margin-bottom: 20px;
+  }
 
-    h1{
-        margin-top: 20px;
-    }
+  h1 {
+    margin-top: 20px;
+  }
 
-    p {
+  p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #007acc;
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 800px;
+  }
 
-        line-height: 1.8;
-        margin-bottom: 15px;
-        background-color: #f9f9f9;
-        border-left: 4px solid #007acc;
-        padding: 15px;
-        border-radius: 5px;
-        max-width: 800px;
-    }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
 
+  th,
+  td {
+    border-bottom: solid 0.5px #3f3b3b;
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    color: #000000;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  th {
+    background-color: #1a60ab;
+  }
+
+  .search-container {
+    position: absolute;
+    /* Allows for positioning in the corner */
+    top: 20px;
+    /* Distance from the top of the page */
+    right: 20px;
+    /* Distance from the right of the page */
+    display: flex;
+    align-items: center;
+  }
+
+  .collapsible {
+    max-width: 450px;
+    overflow: hidden;
+    font-weight: 500;
+  }
+
+  .collapsible label {
+    position: relative;
+    font-weight: 600;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+  }
 </style>
 
+<header>
 
-<h1>Types of Drones</h1>
-<img src="/Users/thomasheeps/mCode/secTrainingWebsite/TYPES-OF-DRONES.jpg"
-            width="800" height="350" "Types of Drones">
+  <h1>Types of Drones</h1>
+  <img src="/Users/thomasheeps/mCode/secTrainingWebsite/TYPES-OF-DRONES.jpg" width="800" height="350" "Types of Drones">
+
+
+  <div class="search-container">
+    <input type="text" placeholder="Search..." class="search-input">
+    <button class="search-button">🔍</button>
+  </div>
+
+  <button onclick="window.location.href='/Users/thomasheeps/mCode/secTrainingWebsite/drones.html';"
+    class="types-button">Home</button>
+
+</header>
 
 <nav>
-    <ul>
-        <li><a href="#multirotor">Multirotor Drones</a></li>
-        <li><a href="#Fixed-Wing">Fixed-Wing Drones</a></li>
-        <li><a href="#single-rotor">Single-Rotor Drones</a></li>
-        <li><a href="#hybrid-vtol">Fixed-Wing Hybrid VTOL (Vertical Takeoff and Landing) Drones</a></li>
-        <li><a href="#tactical-military">Tactical Military Drones</a></li>
-        <li><a href="#micro-nano">Micro and Nano Drones</a></li>
-        <li><a href="#racing">Racing Drones</a></li>
-    </ul>
+  <ul>
+    <li><a href="#multirotor">Multirotor Drones</a></li>
+    <li><a href="#Fixed-Wing">Fixed-Wing Drones</a></li>
+    <li><a href="#single-rotor">Single-Rotor Drones</a></li>
+    <li><a href="#hybrid-vtol">Fixed-Wing Hybrid VTOL (Vertical Takeoff and Landing) Drones</a></li>
+    <li><a href="#tactical-military">Tactical Military Drones</a></li>
+    <li><a href="#micro-nano">Micro and Nano Drones</a></li>
+    <li><a href="#racing">Racing Drones</a></li>
+  </ul>
 </nav>
 
 
+<table>
+  <thead>
+    <tr>
+      <th>Type of Drone</th>
+      <th>Key Features</th>
+      <th>Applications</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Multirotor</th>
+      <td>Stability, high maneuverability</td>
+      <td>Photography, inspections</td>
+    </tr>
 
-<p id="multirotor">
+    <tr>
+      <th>Fixed-Wing</th>
+      <td>Long-range, efficient</td>
+      <td>Surveying, environmental monitoring</td>
+    </tr>
+
+    <tr>
+      <th>Single-Rotor</th>
+      <td>Efficient for heavy loads</td>
+      <td>Longer flights, heavier loads</td>
+    </tr>
+
+    <tr>
+      <th>Hybrid VTOL</th>
+      <td>Vertical takeoff with long-range</td>
+      <td>Rugged terrains, extended distances</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="wrapper">
+  <div class="collapsible">
+    <label>Test</label>
+    <div class="collapsible-text"></div>
+      <h2>heading</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis consequatur neque iusto unde assumenda laborum cumque earum tempora aperiam deleniti, dolores quaerat exercitationem vitae, quod atque corrupti adipisci cupiditate sapiente?</p>
+  </div>
+</div>
+
+<button type="button" class="collapsible">Open Collapsible</button>
+<div class="content">
+  <p id="multirotor">
     Multirotor Drones: These drones, equipped with multiple rotors,
     offer exceptional stability and are popular for photography, mapping,
-     and inspections. They typically have shorter flight times due to
-     energy-intensive hovering. Learn more about multirotor capabilities
-    and uses at <a href="https://www.grepow.com/blog/multirotor-vs-fixed-wing-vs-vtol-uav-what-is-the-difference.html">Grepow</a>
-</p>
+    and inspections. They typically have shorter flight times due to
+    energy-intensive hovering. Learn more about multirotor capabilities
+    and uses at <a
+      href="https://www.grepow.com/blog/multirotor-vs-fixed-wing-vs-vtol-uav-what-is-the-difference.html">Grepow</a>
+  </p>
+</div>
 
 <p id="Fixed-Wing">
-    Fixed-Wing Drones: Known for their aerodynamics and efficiency,
-    fixed-wing drones can cover large distances at high speeds,
-    making them ideal for surveying and environmental monitoring.
-    However, they need space for takeoff and landing.
-    You can find more about their advantages at
-    <a href="https://www.sciencedirect.com/topics/computer-science/fixed-wing-drone">sciencedirect</a>
+  Fixed-Wing Drones: Known for their aerodynamics and efficiency,
+  fixed-wing drones can cover large distances at high speeds,
+  making them ideal for surveying and environmental monitoring.
+  However, they need space for takeoff and landing.
+  You can find more about their advantages at
+  <a href="https://www.sciencedirect.com/topics/computer-science/fixed-wing-drone">sciencedirect</a>
 </p>
 
 <p id="single-rotor">
-    Single-Rotor Drones: Featuring one main rotor and a tail rotor,
-    these drones are structurally similar to helicopters and are suitable
-    for longer flights and carrying heavier loads. Their design makes them
-    more efficient than multirotors. Discover more at
-    <a href="https://www.dronetutorials.com/single-rotor-drones">Drone Tutorials</a>.
+  Single-Rotor Drones: Featuring one main rotor and a tail rotor,
+  these drones are structurally similar to helicopters and are suitable
+  for longer flights and carrying heavier loads. Their design makes them
+  more efficient than multirotors. Discover more at
+  <a href="https://www.dronetutorials.com/single-rotor-drones">Drone Tutorials</a>.
 </p>
 
 
 <p id="hybrid-vtol">
-    Fixed-Wing Hybrid VTOL Drones: These drones combine fixed-wing and
-     multirotor capabilities, allowing for vertical takeoff and landing
-     along with extended flight distances. They're especially useful in
-     difficult terrain where traditional takeoff isn't possible. Read more
-     about hybrid VTOL drones at
-     <a href="https://www.hybridvtoldrones.com">Hybrid VTOL Drones</a>.
+  Fixed-Wing Hybrid VTOL Drones: These drones combine fixed-wing and
+  multirotor capabilities, allowing for vertical takeoff and landing
+  along with extended flight distances. They're especially useful in
+  difficult terrain where traditional takeoff isn't possible. Read more
+  about hybrid VTOL drones at
+  <a href="https://www.hybridvtoldrones.com">Hybrid VTOL Drones</a>.
 </p>
 
 <p id="tactical-military">
-    Tactical Military Drones: Designed for reconnaissance, surveillance, and
-    combat, these drones are highly specialized, capable of enduring challenging
-    conditions and performing various military missions. Learn more at
-    <a href="https://www.militarydrones.com/tactical">Military Drones</a>.
+  Tactical Military Drones: Designed for reconnaissance, surveillance, and
+  combat, these drones are highly specialized, capable of enduring challenging
+  conditions and performing various military missions. Learn more at
+  <a href="https://www.militarydrones.com/tactical">Military Drones</a>.
 </p>
 
 <p id="micro-nano">
-    Micro and Nano Drones: These miniature drones are ideal for indoor
-    inspections, surveillance, and exploration in confined spaces. Despite
-    their small size, they're packed with sophisticated technology. Find
-    additional information at
-    <a href="https://www.micronanodrones.com">Micro and Nano Drones</a>.
+  Micro and Nano Drones: These miniature drones are ideal for indoor
+  inspections, surveillance, and exploration in confined spaces. Despite
+  their small size, they're packed with sophisticated technology. Find
+  additional information at
+  <a href="https://www.micronanodrones.com">Micro and Nano Drones</a>.
 </p>
 
 <p id="racing">
-    Racing Drones: Built for speed and agility, racing drones are used in
-    competitive events where pilots navigate complex courses at high speeds.
-    These drones are often customized for maximum performance. Read more at
-    <a href="https://www.droneracingleague.com">Drone Racing League</a>.
+  Racing Drones: Built for speed and agility, racing drones are used in
+  competitive events where pilots navigate complex courses at high speeds.
+  These drones are often customized for maximum performance. Read more at
+  <a href="https://www.droneracingleague.com">Drone Racing League</a>.
 </p>
